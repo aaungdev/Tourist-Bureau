@@ -2,11 +2,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 20px;
+  padding: 13px 40px;
   border-bottom: 1px solid #ccc;
-  background-color: #f8f9fa;
 }
 
+body {
+  background-color: #f8f9fa;
+}
 .logoLink {
   display: flex;
   align-items: center;
@@ -95,10 +97,10 @@
   right: 10px;
 }
 
-.signup-section {
+.signupSection {
   display: flex;
   width: 90%;
-  height: 300px;
+  height: 280px;
   margin: 50px;
 }
 
@@ -204,7 +206,7 @@ footer {
   transition: transform 0.3s ease;
 }
 
-.socialIicon:hover {
+.socialIcon:hover {
   transform: scale3d(4s);
 }
 .toursTabs {
@@ -214,14 +216,15 @@ footer {
 
 .toursTabs h2 {
   color: #333;
-  font-size: 24px;
+  font-size: 36px;
+  font-weight: bold;
   margin-bottom: 10px;
 }
 
 .toursTabs p {
   color: #666;
-  font-size: 16px;
-  margin-bottom: 0;
+  font-size: 20px;
+  margin-bottom: 2;
   text-align: center;
 }
 .tabText {
@@ -259,7 +262,9 @@ footer {
 .tabLinks:not(.active):hover {
   background-color: #e0e0e0;
 }
-
+#tourTab {
+  background-color: #a18f5418;
+}
 .gridContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -272,6 +277,8 @@ footer {
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  margin: 1em;
+  border-radius: 10px;
 }
 
 .tourCard img {
@@ -311,7 +318,6 @@ footer {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   margin: 0;
-  padding: 10px;
   font-size: 1.2rem;
 }
 
@@ -322,7 +328,7 @@ footer {
 }
 
 .hoverInfo p {
-  margin-top: 20%;
+  margin-top: 9%;
   font-size: 1rem;
 }
 
@@ -333,6 +339,7 @@ footer {
   color: #333;
   cursor: pointer;
   font-size: 1rem;
+  border-radius: 20px;
 }
 
 .hoverInfo button:hover {
@@ -347,4 +354,71 @@ footer {
 
 .tourCard:hover img {
   transform: scale(1.1);
+}
+
+.clientSuccessSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background-color: #f8f9fa;
+}
+
+.clientSuccessContent {
+  width: 60%;
+}
+
+.clientSuccessTitle {
+  color: #333;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.clientSuccessSubtitle {
+  color: #666;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.testimonialContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.testimonial {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonialQuote {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.testimonialRating {
+  color: #ffc107;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.testimonialAuthor {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+}
+
+.clientSuccessImage {
+  width: 35%;
+}
+
+.clientSuccessImage img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 20px;
 }

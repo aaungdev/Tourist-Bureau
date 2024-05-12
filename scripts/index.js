@@ -23,36 +23,40 @@ function showSlides(n) {
 }
 
 window.onload = function() {
-    function openTab(evt, tabName) {
-        // Hide all tab content first
-        var i, tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";  // Hide each content
+    window.openTab = function(tabName) {
+        // Get all elements with the class 'tabContent' and hide them
+        const tabContents = document.getElementsByClassName('tabContent');
+        for (const content of tabContents) {
+            content.style.display = 'none';  // Hide each content section
         }
 
-        // Remove the "active" class from all tabs
-        var tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        // Remove "active" class from all tab links
+        const tabLinks = document.getElementsByClassName('tabLinks');
+        for (const link of tabLinks) {
+            link.classList.remove('active');
         }
 
-        // Show the specific tabs related to the clicked tab link
-        var activeContent = document.querySelectorAll('#' + tabName + ' .tabcontent');  // Select all child divs
-        for (i = 0; i < activeContent.length; i++) {
-            activeContent[i].style.display = "block";  // Display each child content
+        // Display the correct tab content and add "active" class to the clicked tab link
+        const activeTabContent = document.getElementById(tabName);
+        activeTabContent.style.display = 'block';  // Display the block for the selected tab
+
+        // Also, make sure to display all tourCard elements within the selected tab
+        const tourCards = activeTabContent.getElementsByClassName('tourCard');
+        for (const card of tourCards) {
+            card.style.display = 'block';  // Make sure all cards within the tab are visible
         }
 
-        // Add "active" class to the clicked tab link
-        evt.currentTarget.className += " active";
+        // Find the button with matching tabName and add "active"
+        for (const link of tabLinks) {
+            if (link.dataset.tabname === tabName) {
+                link.classList.add('active');
+            }
+        }
+    };
+
+    // Automatically open the first tab
+    const firstTab = document.getElementsByClassName('tabLinks')[0];
+    if (firstTab) {
+        openTab(firstTab.dataset.tabname); // Open the first tab by default
     }
-
-    // Set the default tab to be open
-    // Replace 'ActiveTours' with the ID of the tab you want open by default
-    document.getElementById('ActiveTours').style.display = 'block'; 
-    var defaultTab = document.querySelector('.tablinks');
-    if (defaultTab) {
-        defaultTab.click(); // Simulate a click on the default tab
-    }
-}
-
-
+};
