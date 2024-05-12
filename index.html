@@ -52,23 +52,85 @@
       </div>
     </main>
     <div class="tourTabs">
-      <h2>Most Popular Tours</h2>
-      <p>Choose from hundreds of tours from specialist organizations</p>
+      <h2 class="tabText">Most Popular Tours</h2>
+      <p class="tabText">
+        Choose from hundreds of tours from specialist organizations
+      </p>
       <div class="tab">
-        <button class="tabLinks active" onclick="openTab(event, 'activeTours')">
+        <button class="tabLinks active" data-tabname="activeTours">
           Active Tours
         </button>
-        <button class="tabLinks" onclick="openTab(event, 'culturalTours')">
+        <button class="tabLinks" data-tabname="culturalTours">
           Cultural Tours
         </button>
-        <button class="tabLinks" onclick="openTab(event, 'luxuryTours')">
+        <button class="tabLinks" data-tabname="activeTours">
           Luxury Tours
+        </button>
+        <button class="tabLinks" data-tabname="adventureTours">
+          Adventure Tours
+        </button>
+        <button class="tabLinks" data-tabname="ecoTours">
+          Eco Tours
         </button>
       </div>
     </div>
 
     <div class="gridContainer">
-      <div id="activeTours" class="tourCard">
+      <div id="activeTours" class="tabContent">
+        <div class="tourCard">
+          <img src="images/cart01.jpeg" alt="Active Tour of Croatia" />
+          <div class="info">
+            <h3>Active Tour of Croatia</h3>
+          </div>
+          <div class="hoverInfo">
+            <p>
+              Croatia offers a huge range of possibilities for active holidays,
+              from hiking in national parks to sea kayaking.
+            </p>
+            <button>View Tour</button>
+          </div>
+        </div>
+        <div class="tourCard">
+          <img src="images/cart01.jpeg" alt="Active Tour of Croatia" />
+          <div class="info">
+            <h3>Active Tour of Croatia</h3>
+          </div>
+          <div class="hoverInfo">
+            <p>
+              Croatia offers a huge range of possibilities for active holidays,
+              from hiking in national parks to sea kayaking.
+            </p>
+            <button>View Tour</button>
+          </div>
+        </div>
+        <div class="tourCard">
+          <img src="images/cart01.jpeg" alt="Active Tour of Croatia" />
+          <div class="info">
+            <h3>Active Tour of Croatia</h3>
+          </div>
+          <div class="hoverInfo">
+            <p>
+              Croatia offers a huge range of possibilities for active holidays,
+              from hiking in national parks to sea kayaking.
+            </p>
+            <button>View Tour</button>
+          </div>
+        </div>
+      </div>
+      <div id="luxuryTours" class="tourCard">
+        <img src="images/cart01.jpeg" alt="Active Tour of Croatia" />
+        <div class="info">
+          <h3>Active Tour of Croatia</h3>
+        </div>
+        <div class="hoverInfo">
+          <p>
+            Croatia offers a huge range of possibilities for active holidays,
+            from hiking in national parks to sea kayaking.
+          </p>
+          <button>View Tour</button>
+        </div>
+      </div>
+      <div id="culturalTours" class="tourCard">
         <img src="images/cart01.jpeg" alt="Active Tour of Croatia" />
         <div class="info">
           <h3>Active Tour of Croatia</h3>
