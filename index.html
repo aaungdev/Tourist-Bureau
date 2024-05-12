@@ -51,100 +51,430 @@
         <button class="next" onclick="moveSlide(1)">&#10095;</button>
       </div>
     </main>
-    <div class="tourTabs">
-      <h2 class="tabText">Most Popular Tours</h2>
-      <p class="tabText">
-        Choose from hundreds of tours from specialist organizations
-      </p>
-      <div class="tab">
-        <button class="tabLinks active" data-tabname="activeTours">
-          Active Tours
-        </button>
-        <button class="tabLinks" data-tabname="culturalTours">
-          Cultural Tours
-        </button>
-        <button class="tabLinks" data-tabname="activeTours">
-          Luxury Tours
-        </button>
-        <button class="tabLinks" data-tabname="adventureTours">
-          Adventure Tours
-        </button>
-        <button class="tabLinks" data-tabname="ecoTours">
-          Eco Tours
-        </button>
+    <section id="tourTab">
+      <div class="toursTabs">
+        <h2 class="tabText">Most Popular Tours</h2>
+        <p class="tabText">
+          Choose from hundreds of tours from specialist organizations
+        </p>
+        <div class="tab">
+          <button
+            class="tabLinks"
+            data-tabname="activeTours"
+            onclick="openTab('activeTours')"
+          >
+            Active Tours
+          </button>
+          <button
+            class="tabLinks"
+            data-tabname="culturalTours"
+            onclick="openTab('culturalTours')"
+          >
+            Cultural Tours
+          </button>
+          <button
+            class="tabLinks"
+            data-tabname="luxuryTours"
+            onclick="openTab('luxuryTours')"
+          >
+            Luxury Tours
+          </button>
+          <button
+            class="tabLinks"
+            data-tabname="adventureTours"
+            onclick="openTab('adventureTours')"
+          >
+            Adventure Tours
+          </button>
+          <button
+            class="tabLinks"
+            data-tabname="ecoTours"
+            onclick="openTab('ecoTours')"
+          >
+            Eco Tours
+          </button>
+        </div>
       </div>
-    </div>
 
-    <div class="gridContainer">
       <div id="activeTours" class="tabContent">
-        <div class="tourCard">
-          <img src="images/cart01.jpeg" alt="Active Tour of Croatia" />
-          <div class="info">
-            <h3>Active Tour of Croatia</h3>
+        <div class="gridContainer">
+          <div class="tourCard">
+            <img src="images/cart02.jpeg" alt="Rich Culture and History" />
+            <div class="info">
+              <h3>Rich Culture and History</h3>
+            </div>
+            <div class="hoverInfo">
+              <p>
+                Croatia offers a huge range of possibilities for active
+                holidays, from hiking in national parks to sea kayaking.
+              </p>
+              <button>View Tour</button>
+            </div>
           </div>
-          <div class="hoverInfo">
-            <p>
-              Croatia offers a huge range of possibilities for active holidays,
-              from hiking in national parks to sea kayaking.
-            </p>
-            <button>View Tour</button>
+          <div class="tourCard">
+            <img src="images/cart03.jpeg" alt="Rich Culture and History" />
+            <div class="info">
+              <h3>Rich Culture and History</h3>
+            </div>
+            <div class="hoverInfo">
+              <p>
+                Croatia offers a huge range of possibilities for active
+                holidays, from hiking in national parks to sea kayaking.
+              </p>
+              <button>View Tour</button>
+            </div>
           </div>
-        </div>
-        <div class="tourCard">
-          <img src="images/cart01.jpeg" alt="Active Tour of Croatia" />
-          <div class="info">
-            <h3>Active Tour of Croatia</h3>
+          <div class="tourCard">
+            <img src="images/cart07.jpeg" alt="Rich Culture and History" />
+            <div class="info">
+              <h3>Rich Culture and History</h3>
+            </div>
+            <div class="hoverInfo">
+              <p>
+                Croatia offers a huge range of possibilities for active
+                holidays, from hiking in national parks to sea kayaking.
+              </p>
+              <button>View Tour</button>
+            </div>
           </div>
-          <div class="hoverInfo">
-            <p>
-              Croatia offers a huge range of possibilities for active holidays,
-              from hiking in national parks to sea kayaking.
-            </p>
-            <button>View Tour</button>
+          <div class="tourCard">
+            <img src="images/cart04.jpeg" alt="Rich Culture and History" />
+            <div class="info">
+              <h3>Rich Culture and History</h3>
+            </div>
+            <div class="hoverInfo">
+              <p>
+                Croatia offers a huge range of possibilities for active
+                holidays, from hiking in national parks to sea kayaking.
+              </p>
+              <button>View Tour</button>
+            </div>
           </div>
-        </div>
-        <div class="tourCard">
-          <img src="images/cart01.jpeg" alt="Active Tour of Croatia" />
-          <div class="info">
-            <h3>Active Tour of Croatia</h3>
+          <div class="tourCard">
+            <img src="images/cart09.jpeg" alt="Rich Culture and History" />
+            <div class="info">
+              <h3>Rich Culture and History</h3>
+            </div>
+            <div class="hoverInfo">
+              <p>
+                Croatia offers a huge range of possibilities for active
+                holidays, from hiking in national parks to sea kayaking.
+              </p>
+              <button>View Tour</button>
+            </div>
           </div>
-          <div class="hoverInfo">
-            <p>
-              Croatia offers a huge range of possibilities for active holidays,
-              from hiking in national parks to sea kayaking.
-            </p>
-            <button>View Tour</button>
+          <div class="tourCard">
+            <img src="images/cart11.jpeg" alt="Rich Culture and History" />
+            <div class="info">
+              <h3>Rich Culture and History</h3>
+            </div>
+            <div class="hoverInfo">
+              <p>
+                Croatia offers a huge range of possibilities for active
+                holidays, from hiking in national parks to sea kayaking.
+              </p>
+              <button>View Tour</button>
+            </div>
           </div>
         </div>
       </div>
-      <div id="luxuryTours" class="tourCard">
-        <img src="images/cart01.jpeg" alt="Active Tour of Croatia" />
-        <div class="info">
-          <h3>Active Tour of Croatia</h3>
-        </div>
-        <div class="hoverInfo">
-          <p>
-            Croatia offers a huge range of possibilities for active holidays,
-            from hiking in national parks to sea kayaking.
-          </p>
-          <button>View Tour</button>
-        </div>
-      </div>
-      <div id="culturalTours" class="tourCard">
-        <img src="images/cart01.jpeg" alt="Active Tour of Croatia" />
-        <div class="info">
-          <h3>Active Tour of Croatia</h3>
-        </div>
-        <div class="hoverInfo">
-          <p>
-            Croatia offers a huge range of possibilities for active holidays,
-            from hiking in national parks to sea kayaking.
-          </p>
-          <button>View Tour</button>
-        </div>
-      </div>
-    </div>
 
+      <div id="culturalTours" class="tabContent">
+        <div class="gridContainer">
+          <div class="tourCard">
+            <img src="images/cart28.jpg!d" alt="Rich Culture and History" />
+            <div class="info">
+              <h3>Rich Culture and History</h3>
+            </div>
+            <div class="hoverInfo">
+              <p>
+                Croatia offers a huge range of possibilities for active
+                holidays, from hiking in national parks to sea kayaking.
+              </p>
+              <button>View Tour</button>
+            </div>
+          </div>
+          <div class="tourCard">
+            <img src="images/cart01.jpeg" alt="Rich Culture and History" />
+            <div class="info">
+              <h3>Rich Culture and History</h3>
+            </div>
+            <div class="hoverInfo">
+              <p>
+                Croatia offers a huge range of possibilities for active
+                holidays, from hiking in national parks to sea kayaking.
+              </p>
+              <button>View Tour</button>
+            </div>
+          </div>
+          <div class="tourCard">
+            <img src="images/cart05.jpeg" alt="Rich Culture and History" />
+            <div class="info">
+              <h3>Rich Culture and History</h3>
+            </div>
+            <div class="hoverInfo">
+              <p>
+                Croatia offers a huge range of possibilities for active
+                holidays, from hiking in national parks to sea kayaking.
+              </p>
+              <button>View Tour</button>
+            </div>
+          </div>
+          <div class="tourCard">
+            <img src="images/cart08.jpeg" alt="Rich Culture and History" />
+            <div class="info">
+              <h3>Rich Culture and History</h3>
+            </div>
+            <div class="hoverInfo">
+              <p>
+                Croatia offers a huge range of possibilities for active
+                holidays, from hiking in national parks to sea kayaking.
+              </p>
+              <button>View Tour</button>
+            </div>
+          </div>
+          <div class="tourCard">
+            <img src="images/cart13.jpeg" alt="Rich Culture and History" />
+            <div class="info">
+              <h3>Rich Culture and History</h3>
+            </div>
+            <div class="hoverInfo">
+              <p>
+                Croatia offers a huge range of possibilities for active
+                holidays, from hiking in national parks to sea kayaking.
+              </p>
+              <button>View Tour</button>
+            </div>
+          </div>
+          <div class="tourCard">
+            <img src="images/cart14.jpeg" alt="Rich Culture and History" />
+            <div class="info">
+              <h3>Rich Culture and History</h3>
+            </div>
+            <div class="hoverInfo">
+              <p>
+                Croatia offers a huge range of possibilities for active
+                holidays, from hiking in national parks to sea kayaking.
+              </p>
+              <button>View Tour</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="luxuryTours" class="tabContent">
+        <div class="gridContainer">
+          <div class="tourCard">
+            <img src="images/cart21.jpeg" alt="Rich Culture and History" />
+            <div class="info">
+              <h3>Rich Culture and History</h3>
+            </div>
+            <div class="hoverInfo">
+              <p>
+                Croatia offers a huge range of possibilities for active
+                holidays, from hiking in national parks to sea kayaking.
+              </p>
+              <button>View Tour</button>
+            </div>
+          </div>
+          <div class="tourCard">
+            <img src="images/cart29.jpeg" alt="Rich Culture and History" />
+            <div class="info">
+              <h3>Rich Culture and History</h3>
+            </div>
+            <div class="hoverInfo">
+              <p>
+                Croatia offers a huge range of possibilities for active
+                holidays, from hiking in national parks to sea kayaking.
+              </p>
+              <button>View Tour</button>
+            </div>
+          </div>
+          <div class="tourCard">
+            <img src="images/cart23.jpeg" alt="Rich Culture and History" />
+            <div class="info">
+              <h3>Rich Culture and History</h3>
+            </div>
+            <div class="hoverInfo">
+              <p>
+                Croatia offers a huge range of possibilities for active
+                holidays, from hiking in national parks to sea kayaking.
+              </p>
+              <button>View Tour</button>
+            </div>
+          </div>
+          <div class="tourCard">
+            <img src="images/cart30.webp" alt="Rich Culture and History" />
+            <div class="info">
+              <h3>Rich Culture and History</h3>
+            </div>
+            <div class="hoverInfo">
+              <p>
+                Croatia offers a huge range of possibilities for active
+                holidays, from hiking in national parks to sea kayaking.
+              </p>
+              <button>View Tour</button>
+            </div>
+          </div>
+          <div class="tourCard">
+            <img src="images/cart31.webp" alt="Rich Culture and History" />
+            <div class="info">
+              <h3>Rich Culture and History</h3>
+            </div>
+            <div class="hoverInfo">
+              <p>
+                Croatia offers a huge range of possibilities for active
+                holidays, from hiking in national parks to sea kayaking.
+              </p>
+              <button>View Tour</button>
+            </div>
+          </div>
+          <div class="tourCard">
+            <img src="images/cart26.jpeg" alt="Rich Culture and History" />
+            <div class="info">
+              <h3>Rich Culture and History</h3>
+            </div>
+            <div class="hoverInfo">
+              <p>
+                Croatia offers a huge range of possibilities for active
+                holidays, from hiking in national parks to sea kayaking.
+              </p>
+              <button>View Tour</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="adventureTours" class="tabContent">
+        <div class="gridContainer">
+          <div class="tourCard">
+            <img src="images/cart15.jpeg" alt="Rich Culture and History" />
+            <div class="info">
+              <h3>Rich Culture and History</h3>
+            </div>
+            <div class="hoverInfo">
+              <p>
+                Croatia offers a huge range of possibilities for active
+                holidays, from hiking in national parks to sea kayaking.
+              </p>
+              <button>View Tour</button>
+            </div>
+          </div>
+          <div class="tourCard">
+            <img src="images/cart16.jpeg" alt="Rich Culture and History" />
+            <div class="info">
+              <h3>Rich Culture and History</h3>
+            </div>
+            <div class="hoverInfo">
+              <p>
+                Croatia offers a huge range of possibilities for active
+                holidays, from hiking in national parks to sea kayaking.
+              </p>
+              <button>View Tour</button>
+            </div>
+          </div>
+          <div class="tourCard">
+            <img src="images/cart17.jpeg" alt="Rich Culture and History" />
+            <div class="info">
+              <h3>Rich Culture and History</h3>
+            </div>
+            <div class="hoverInfo">
+              <p>
+                Croatia offers a huge range of possibilities for active
+                holidays, from hiking in national parks to sea kayaking.
+              </p>
+              <button>View Tour</button>
+            </div>
+          </div>
+          <div class="tourCard">
+            <img src="images/cart18.png" alt="Rich Culture and History" />
+            <div class="info">
+              <h3>Rich Culture and History</h3>
+            </div>
+            <div class="hoverInfo">
+              <p>
+                Croatia offers a huge range of possibilities for active
+                holidays, from hiking in national parks to sea kayaking.
+              </p>
+              <button>View Tour</button>
+            </div>
+          </div>
+          <div class="tourCard">
+            <img src="images/cart19.jpeg" alt="Rich Culture and History" />
+            <div class="info">
+              <h3>Rich Culture and History</h3>
+            </div>
+            <div class="hoverInfo">
+              <p>
+                Croatia offers a huge range of possibilities for active
+                holidays, from hiking in national parks to sea kayaking.
+              </p>
+              <button>View Tour</button>
+            </div>
+          </div>
+          <div class="tourCard">
+            <img src="images/cart20.webp" alt="Rich Culture and History" />
+            <div class="info">
+              <h3>Rich Culture and History</h3>
+            </div>
+            <div class="hoverInfo">
+              <p>
+                Croatia offers a huge range of possibilities for active
+                holidays, from hiking in national parks to sea kayaking.
+              </p>
+              <button>View Tour</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="clientSuccessSection">
+        <div class="clientSuccessContent">
+          <h2 class="clientSuccessTitle">
+            See how we've helped our guests explore Myanmar
+          </h2>
+          <p class="clientSuccessSubtitle">
+            Join the 1500+ adventurers who've experienced the magic of Myanmar
+            with us
+          </p>
+          <div class="testimonialContainer">
+            <div class="testimonial">
+              <p class="testimonialQuote">
+                "Exploring Myanmar with Mandalay Adventures changed my view of
+                the world. Their attention to detail and unique itinerary
+                ensured a memorable experience."
+              </p>
+              <div class="testimonialRating">⭐⭐⭐⭐⭐</div>
+              <p class="testimonialAuthor">By Nix Maxwell</p>
+            </div>
+            <div class="testimonial">
+              <p class="testimonialQuote">
+                "From the temples of Bagan to the bustling streets of Yangon,
+                each step was carefully planned and perfectly executed. Highly
+                recommend their luxury tours!"
+              </p>
+              <div class="testimonialRating">⭐⭐⭐⭐⭐</div>
+              <p class="testimonialAuthor">By Carolyn Ortiz</p>
+            </div>
+            <div class="testimonial">
+              <p class="testimonialQuote">
+                "The best tour experience in Myanmar! The local guides were
+                knowledgeable and genuinely passionate about showing us their
+                country."
+              </p>
+              <div class="testimonialRating">⭐⭐⭐⭐⭐</div>
+              <p class="testimonialAuthor">By Jordan Doe</p>
+            </div>
+          </div>
+        </div>
+        <div class="clientSuccessImage">
+          <img
+            src="images/review-section.jpeg"
+            alt="Happy tourists in Myanmar"
+          />
+        </div>
+      </div>
+    </section>
     <div class="signup-section">
       <div
         class="signup-image"
@@ -162,6 +492,7 @@
         </form>
       </div>
     </div>
+
     <footer>
       <div class="footerTop">
         <div class="footerSection">
