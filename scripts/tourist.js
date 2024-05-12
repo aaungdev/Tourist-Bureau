@@ -100,72 +100,71 @@ window.onload = function() {
              price: 0.00 
          }
      ];
-    const categorySelect = document.getElementById('categorySelect');
-    const activitySelect = document.getElementById('activitySelect');
-    const activityDetails = document.getElementById('activityDetails');
-    const purchaseForm = document.getElementById('purchaseForm');
-    const confirmationMessage = document.getElementById('confirmationMessage');
 
-    // Populate categories dropdown
-    categories.forEach(function(category) {
-        const option = document.createElement('option');
-        option.textContent = category;
-        option.value = category;
-        categorySelect.appendChild(option);
-    });
-
-    // Handle category selection changes
-    categorySelect.onchange = function() {
-        const selectedCategory = this.value;
-        activitySelect.innerHTML = '<option>Select one</option>'; // Reset activity dropdown
-        if (selectedCategory !== 'Select one') {
-            const filteredActivities = activities.filter(function(activity) {
-                return activity.category === selectedCategory;
-            });
-            filteredActivities.forEach(function(activity) {
-                const option = document.createElement('option');
-                option.value = activity.id;
-                option.textContent = activity.name;
-                activitySelect.appendChild(option);
-            });
-            activitySelect.style.display = 'block';
-        } else {
-            activitySelect.style.display = 'none';
-            activityDetails.style.display = 'none';
-            purchaseForm.style.display = 'none';
-        }
-    };
-
-    // Handle activity selection changes
-    activitySelect.onchange = function() {
-        const selectedActivityId = this.value;
-        const selectedActivity = activities.find(function(activity) {
-            return activity.id === selectedActivityId;
-        });
-        if (selectedActivity) {
-            activityDetails.innerHTML = `<h3>${selectedActivity.name}</h3>
-                                        <p>${selectedActivity.description}</p>
-                                        <p>Location: ${selectedActivity.location}</p>
-                                        <p>Price: $${selectedActivity.price.toFixed(2)}</p>`;
-            activityDetails.style.display = 'block';
-            purchaseForm.style.display = selectedActivity.price > 0 ? 'block' : 'none';
-        }
-    };
-
-    // Handle form submission for purchasing tickets
-    purchaseForm.onsubmit = function(event) {
-        event.preventDefault();
-        const numTickets = document.getElementById('numTickets').value;
-        const emailAddress = document.getElementById('emailAddress').value;
-        const selectedActivityId = activitySelect.value;
-        const selectedActivity = activities.find(function(activity) {
-            return activity.id === selectedActivityId;
-        });
-
-        if (selectedActivity) {
-            const totalCost = selectedActivity.price * numTickets;
-            confirmationMessage.textContent = `Your credit card has been charged $${totalCost.toFixed(2)} for ${numTickets} tickets to ${selectedActivity.name}. A confirmation email has been sent to ${emailAddress}.`;
-            this.reset();
-        }
-    };
-};
+     const categorySelect = document.getElementById('categorySelect');
+     const activitySelect = document.getElementById('activitySelect');
+     const activityDetails = document.getElementById('activityDetails');
+     const purchaseForm = document.getElementById('purchaseForm');
+ 
+     categories.forEach(function(category) {
+         const option = document.createElement('option');
+         option.textContent = category;
+         option.value = category;
+         categorySelect.appendChild(option);
+     });
+ 
+     categorySelect.onchange = function() {
+         const selectedCategory = this.value;
+         activitySelect.innerHTML = '<option>Select one</option>';
+         activityDetails.style.display = 'none';
+         purchaseForm.style.display = 'none';
+ 
+         if (selectedCategory !== 'Select one') {
+             const filteredActivities = activities.filter(function(activity) {
+                 return activity.category === selectedCategory;
+             });
+             filteredActivities.forEach(function(activity) {
+                 const option = document.createElement('option');
+                 option.value = activity.id;
+                 option.textContent = activity.name;
+                 activitySelect.appendChild(option);
+             });
+             activitySelect.style.display = 'block';
+         } else {
+             activitySelect.style.display = 'none';
+         }
+     };
+ 
+     activitySelect.onchange = function() {
+         const selectedActivityId = this.value;
+         const selectedActivity = activities.find(function(activity) {
+             return activity.id === selectedActivityId;
+         });
+         if (selectedActivity) {
+             activityDetails.innerHTML = '<h3>' + selectedActivity.name + '</h3>' +
+                                         '<p>' + selectedActivity.description + '</p>' +
+                                         '<p>Location: ' + selectedActivity.location + '</p>' +
+                                         '<p>Price: $' + selectedActivity.price.toFixed(2) + '</p>';
+             activityDetails.style.display = 'block';
+             purchaseForm.style.display = selectedActivity.price > 0 ? 'block' : 'none';
+         }
+     };
+ 
+     purchaseForm.onsubmit = function(event) {
+         event.preventDefault();
+         const numTickets = document.getElementById('numTickets').value;
+         const emailAddress = document.getElementById('emailAddress').value;
+         const selectedActivityId = activitySelect.value;
+         const selectedActivity = activities.find(function(activity) {
+             return activity.id === selectedActivityId;
+         });
+ 
+         if (selectedActivity) {
+             const totalCost = selectedActivity.price * numTickets;
+             document.getElementById('confirmationMessage').textContent = 'Your credit card has been charged $' + totalCost.toFixed(2) +
+                                                                         ' for ' + numTickets + ' tickets to ' + selectedActivity.name +
+                                                                         '. A confirmation email has been sent to ' + emailAddress + '.';
+             this.reset();
+         }
+     };
+ };
