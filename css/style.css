@@ -44,109 +44,192 @@
   color: #a18f54;
   text-decoration: underline;
 }
-.cardContainer {
+
+.carousel {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+}
+.carouselItem h2,
+.carouselItem p {
+  padding-top: 2em;
+  text-align: center;
+  font-style: normal;
+  color: #ffffff;
+  font-size: 5em;
+}
+
+.carouselItem {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+.carouselItem.active {
+  opacity: 1;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 20px;
-  width: 100%;
-  font-size: 0.7em;
+  gap: 10px;
+  padding: 10px;
 }
-.card {
+
+.tour-card {
   position: relative;
   overflow: hidden;
   cursor: pointer;
 }
 
-.cardImage {
+.tour-card img {
   width: 100%;
   height: auto;
-  transition: transform 0.5s ease;
+  display: block;
+  transition: transform 0.3s ease;
 }
 
-.cardInfo {
+.info,
+.hover-info {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.7); /* Dark overlay */
-  color: white;
-  padding: 20px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: all 0.5s ease;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.info h3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 10px;
+  font-size: 1.2rem;
+  transition: background-color 0.5s ease;
+}
+
+.hover-info {
+  background-color: rgba(161, 143, 84, 0.9);
   opacity: 0;
-  transition: opacity 0.5s ease;
+  overflow: hidden;
 }
 
-.card:hover .cardImage {
-  transform: scale(1.1); /* Zoom effect */
+.hover-info p {
+  margin-top: 20%;
+  font-size: 1rem;
+  padding-top: 4em;
 }
 
-.card:hover .cardInfo {
-  opacity: 1; /* Show details */
-}
-
-.viewTourButton {
-  padding: 10px 20px;
-  background-color: #67d1d3; /* Golden color */
+.hover-info button {
   border: none;
-  border-radius: 5px;
-  font-size: 1em;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #333;
   cursor: pointer;
-  transition: background-color 0.3s;
+  font-size: 1rem;
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    box-shadow 0.3s;
 }
 
-.viewTourButton:hover {
-  background-color: #cca700; /* Darker gold on hover */
+.hover-info button:hover {
+  background-color: #a18f54;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.carousel {
-    width: 100%;
-    height: 600px;
-    position: relative;
-    overflow: hidden;
-}
-.carouselItem h2, .carouselItem p {
-    padding-top: 2em;
-   text-align: center;
-   font-style: normal;
-   color: #ffffff;
-   font-size: 5em;
+.tour-card:hover .hover-info {
+  opacity: 1;
 }
 
-.carouselItem {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
+.tour-card:hover img {
+  transform: scale(1.1);
+}
+
+
+.signup-section {
+    display: flex;
+    width: 80%;
+    height: 300px; 
+}
+
+.signup-image {
+    flex: 1;
     background-size: cover;
     background-position: center;
-    transition: opacity 0.5s ease;
-    opacity: 0;
 }
 
-.carouselItem.active {
-    opacity: 1;
+.signup-content {
+    flex: 1;
+    background-color: #124076;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.signup-content h2 {
+    margin-bottom: 10px;
+}
+
+.signup-content p {
+    margin-bottom: 20px;
+}
+
+input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    width: 250px;
 }
 
 button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #fff;
+    padding: 10px 20px;
     border: none;
+    background-color: white;
+    color: #124076;
     cursor: pointer;
-    padding: 10px;
-    z-index: 10;
+    transition: background-color 0.3s;
 }
 
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
+button:hover {
+    background-color: #0a2c52; /* Darker shade for hover effect */
 }
