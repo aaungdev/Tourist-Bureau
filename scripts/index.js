@@ -61,18 +61,3 @@ window.onload = function() {
     }
 };
 
-window.addEventListener('load', function() {
-    var navItems = document.getElementsByClassName('navItem');
-    for (var i = 0; i < navItems.length; i++) {
-        navItems[i].onclick = function() {
-            // Remove the 'active' class from all nav items
-            var allNavItems = document.getElementsByClassName('navItem');
-            for (var j = 0; j < allNavItems.length; j++) {
-                allNavItems[j].classList.remove('active');
-            }
-
-            // Add 'active' class to the clicked nav item
-            this.classList.add('active');
-        };
-    }
-});

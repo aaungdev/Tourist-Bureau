@@ -1,3 +1,6 @@
+body {
+  background-color: #f8f9fa;
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -6,9 +9,6 @@
   border-bottom: 1px solid #ccc;
 }
 
-body {
-  background-color: #f8f9fa;
-}
 .logoLink {
   display: flex;
   align-items: center;
@@ -44,8 +44,8 @@ body {
 
 .navItem.active {
   color: #a18f54;
+  font-weight: 800;
   text-decoration: underline;
-  font-weight: 300;
 }
 
 .navItem :hover {

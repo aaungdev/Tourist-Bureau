@@ -20,9 +20,9 @@
       <nav class="navbar">
         <ul class="navList">
           <li class="navItem">
-            <a href="index.html" class="navLink active">Home</a>
+            <a href="index.html" class="navLink">Home</a>
           </li>
-          <li class="navItem">
+          <li class="navItem active">
             <a href="tourist.html" class="navLink">Tourist</a>
           </li>
           <li class="navItem"><a href="#" class="navLink">Activities</a></li>
@@ -30,7 +30,28 @@
         </ul>
       </nav>
     </header>
-
+<main>
+    <h1>Activities and Adventures</h1>
+    <select id="categorySelect">
+        <option>Select one</option>
+        <!-- Categories will be populated by JavaScript -->
+    </select>
+    <select id="activitySelect" style="display: none;">
+        <option>Select one</option>
+        <!-- Activities will be populated by JavaScript -->
+    </select>
+    <div id="activityDetails" style="display: none;">
+        <!-- Details will be filled by JavaScript -->
+    </div>
+    <form id="purchaseForm" style="display: none;" onsubmit="return false;">
+        <input type="number" id="numTickets" placeholder="Number of tickets needed" required>
+        <input type="text" id="creditCard" placeholder="Credit card number" required>
+        <input type="email" id="emailAddress" placeholder="Email address" required>
+        <button type="button" onclick="purchaseTickets()">Purchase</button>
+        <button type="reset">Reset</button>
+    </form>
+    <div id="confirmationMessage"></div>
+</main>
     <footer>
         <div class="footerTop">
           <div class="footerSection">
@@ -53,5 +74,8 @@
         </div>
       </footer>
       <script src="scripts/index.js"></script>
+      <script src="scripts/tourist.js"></script>
+      <script src="data/activities.js"></script>
+      <script src="data/hiking.js"></script>
     </body>
   </html>
