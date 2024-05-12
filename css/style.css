@@ -1,0 +1,145 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #ccc;
+  background-color: #f8f9fa;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #124076;
+}
+
+.logoText {
+  padding-left: 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+}
+
+.navItem {
+  padding: 0 10px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #124076;
+  font-size: 1.3rem;
+  font-weight: 100;
+}
+
+.navLink.active {
+  color: #a18f54;
+  text-decoration: underline;
+}
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  font-size: 0.7em;
+}
+.card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.cardImage {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.cardInfo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.card:hover .cardImage {
+  transform: scale(1.1); /* Zoom effect */
+}
+
+.card:hover .cardInfo {
+  opacity: 1; /* Show details */
+}
+
+.viewTourButton {
+  padding: 10px 20px;
+  background-color: #67d1d3; /* Golden color */
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.viewTourButton:hover {
+  background-color: #cca700; /* Darker gold on hover */
+}
+
+.carousel {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.carouselItem {
+    position: absolute;
+    top: 0;
+    width: 80%;
+    height: 80%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.carouselItem.active {
+    opacity: 1;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
