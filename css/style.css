@@ -437,16 +437,22 @@ footer {
 
 .activitiesFinder {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     margin-bottom: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .activitySelectionArea,
 .activityDetailsDisplay,
 .activityPurchaseForm {
-    width: 48%;
-    padding: 20px;
-    border: 1px solid #ccc;
+  flex-wrap: ; 
+  width: 48%;
+    padding: 10px;
+    margin: 10px;
     border-radius: 8px;
 }
 
