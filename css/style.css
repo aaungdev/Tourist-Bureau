@@ -427,3 +427,68 @@ footer {
   display: block;
   border-radius: 20px;
 }
+
+.activityMain {
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.activitiesFinder {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.activitySelectionArea,
+.activityDetailsDisplay,
+.activityPurchaseForm {
+    width: 48%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.activitySelectionArea label,
+.activityPurchaseForm label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.activitySelectionArea select,
+.activityPurchaseForm input[type="number"],
+.activityPurchaseForm input[type="text"],
+.activityPurchaseForm input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.purchaseButton,
+.resetButton {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.resetButton {
+    background-color: #f44336;
+    color: white;
+}
+
+.purchaseButton {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.confirmationMessageArea {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin-top: 20px;
+}

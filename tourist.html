@@ -30,28 +30,53 @@
         </ul>
       </nav>
     </header>
-<main>
-    <h1>Activities and Adventures</h1>
-    <select id="categorySelect">
-        <option>Select one</option>
-        <!-- Categories will be populated by JavaScript -->
-    </select>
-    <select id="activitySelect" style="display: none;">
-        <option>Select one</option>
-        <!-- Activities will be populated by JavaScript -->
-    </select>
-    <div id="activityDetails" style="display: none;">
-        <!-- Details will be filled by JavaScript -->
-    </div>
-    <form id="purchaseForm" style="display: none;" onsubmit="return false;">
-        <input type="number" id="numTickets" placeholder="Number of tickets needed" required>
-        <input type="text" id="creditCard" placeholder="Credit card number" required>
-        <input type="email" id="emailAddress" placeholder="Email address" required>
-        <button type="button" onclick="purchaseTickets()">Purchase</button>
-        <button type="reset">Reset</button>
-    </form>
-    <div id="confirmationMessage"></div>
-</main>
+    <main class="activityMain">
+        <div class="activitiesFinder">
+            <div class="activitySelectionArea">
+                <label for="categorySelect">Category:</label>
+                <select id="categorySelect">
+                    <option>Select one</option>
+                    <!-- Categories will be populated by JavaScript -->
+                </select>
+    
+                <label for="activitySelect">Activity:</label>
+                <select id="activitySelect">
+                    <option>Select one</option>
+                    <!-- Activities will be populated by JavaScript -->
+                </select>
+            </div>
+    
+            <div id="activityDetails" class="activityDetailsDisplay">
+                <h3>Description</h3>
+                <p id="description">No description here 🌐 First select an activity...</p>
+                <p id="location">No location here 🌐 First select an activity...</p>
+                <p id="price">No price here 🌐 First select an activity...</p>
+            </div>
+        </div>
+    
+        <form id="purchaseForm" class="activityPurchaseForm">
+            <div class="formGroup">
+                <label for="numTickets">Number of Tickets:</label>
+                <input type="number" id="numTickets" placeholder="Number of tickets needed" required>
+            </div>
+            <div class="formGroup">
+                <label for="creditCard">Credit Card Number:</label>
+                <input type="text" id="creditCard" placeholder="Credit card number" required>
+            </div>
+            <div class="formGroup">
+                <label for="emailAddress">Email:</label>
+                <input type="email" id="emailAddress" placeholder="Email address" required>
+            </div>
+            <button type="submit" class="purchaseButton">Purchase</button>
+            <button type="reset" class="resetButton">Reset</button>
+        </form>
+    
+        <div id="confirmationMessage" class="confirmationMessageArea"></div>
+    </main>
+    
+    
+    
+    
     <footer>
         <div class="footerTop">
           <div class="footerSection">
@@ -75,7 +100,5 @@
       </footer>
       <script src="scripts/index.js"></script>
       <script src="scripts/tourist.js"></script>
-      <script src="data/activities.js"></script>
-      <script src="data/hiking.js"></script>
     </body>
   </html>
