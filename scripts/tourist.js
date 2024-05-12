@@ -1,12 +1,12 @@
 window.onload = function() {
-    var categoriesSelect = document.getElementById('categorySelect');
-    var activitiesSelect = document.getElementById('activitySelect');
-    var activityDetails = document.getElementById('activityDetails');
-    var purchaseForm = document.getElementById('purchaseForm');
-    var confirmationMessage = document.getElementById('confirmationMessage');
+    let categoriesSelect = document.getElementById('categorySelect');
+    let activitiesSelect = document.getElementById('activitySelect');
+    let activityDetails = document.getElementById('activityDetails');
+    let purchaseForm = document.getElementById('purchaseForm');
+    let confirmationMessage = document.getElementById('confirmationMessage');
 
     categories.forEach(function(category) {
-        var option = document.createElement('option');
+        let option = document.createElement('option');
         option.value = category;
         option.textContent = category;
         categoriesSelect.appendChild(option);
@@ -19,9 +19,9 @@ window.onload = function() {
         purchaseForm.style.display = 'none';
 
         if (this.value !== 'Select one') {
-            var filteredActivities = activities.filter(activity => activity.category === this.value);
+            let filteredActivities = activities.filter(activity => activity.category === this.value);
             filteredActivities.forEach(function(activity) {
-                var option = document.createElement('option');
+                let option = document.createElement('option');
                 option.value = activity.id;
                 option.textContent = activity.name;
                 activitiesSelect.appendChild(option);
@@ -31,7 +31,7 @@ window.onload = function() {
     };
 
     activitiesSelect.onchange = function() {
-        var selectedActivity = activities.find(activity => activity.id === this.value);
+        let selectedActivity = activities.find(activity => activity.id === this.value);
         if (selectedActivity) {
             activityDetails.innerHTML = `
                 <h3>${selectedActivity.name}</h3>
@@ -45,13 +45,13 @@ window.onload = function() {
     };
 
     window.purchaseTickets = function() {
-        var numTickets = document.getElementById('numTickets').value;
-        var creditCard = document.getElementById('creditCard').value;
-        var emailAddress = document.getElementById('emailAddress').value;
-        var selectedActivity = activities.find(activity => activity.id === activitiesSelect.value);
+        let numTickets = document.getElementById('numTickets').value;
+        let creditCard = document.getElementById('creditCard').value;
+        let emailAddress = document.getElementById('emailAddress').value;
+        let selectedActivity = activities.find(activity => activity.id === activitiesSelect.value);
 
         if (selectedActivity && numTickets > 0 && creditCard && emailAddress) {
-            var totalCost = selectedActivity.price * numTickets;
+            let totalCost = selectedActivity.price * numTickets;
             confirmationMessage.innerHTML = `Your credit card has been charged $${totalCost.toFixed(2)} for ${numTickets} tickets to ${selectedActivity.name}. A confirmation email has been sent to ${emailAddress}.`;
             purchaseForm.reset();
         }
