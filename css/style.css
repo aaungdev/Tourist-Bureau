@@ -542,3 +542,43 @@ footer {
   width: 150px;
   bottom: -44.5px;
 }
+
+
+.containerMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh; /* Viewport height to ensure it covers full screen */
+  width: 100%;
+}
+
+select {
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#hikeDetailsUnique {
+  margin-top: 20px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.imagesContainerUnique {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+img {
+  border-radius: 5px;
+  max-width: 100%;
+  height: auto;
+}

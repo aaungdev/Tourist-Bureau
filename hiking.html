@@ -31,22 +31,25 @@
       </nav>
     </header>
     <main>
-        <div class="container">
-            <select id="hikeSelector">
-                <option value="">Select one</option>
-                <!-- Hike options will be added here dynamically -->
-            </select>
-            
-            <div id="hikeDetails" style="display:none;">
-                <h2 id="hikeName"></h2>
-                <p id="hikeDescription"></p>
-                <img id="scenicImage" src="images/cart05.jpeg" alt="Scenic view" width="300px">
-                <img id="trailMapImage" src="images/cart08.jpeg" alt="Trail map">
-                <p id="hikeLength"></p>
-                <p id="hikeDifficulty"></p>
+      <div class="containerMain">
+          <select id="hikeSelectorUnique">
+              <option value="">Select a hike...</option>
+              <!-- Hike options will be dynamically populated here -->
+          </select>
+          
+          <div id="hikeDetailsUnique" style="display: none;">
+            <h2 id="hikeNameUnique"></h2>
+            <p id="hikeDescriptionUnique"></p>
+            <div class="imagesContainerUnique">
+                <img id="scenicImageViewUnique" alt="Scenic view of the selected hike" width="300px">
+                <img id="trailMapViewUnique" alt="Trail map of the selected hike">
             </div>
+            <p id="hikeLengthUnique"></p>
+            <p id="hikeDifficultyUnique"></p>
         </div>
-    </main>
+    </div>
+</main>
+ 
     <footer>
         <div class="footerTop">
           <div class="footerSection">
