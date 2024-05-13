@@ -1,6 +1,6 @@
 body {
   background-color: #f8f9fa;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 .header {
   display: flex;
@@ -217,9 +217,8 @@ footer {
   padding: 20px;
 }
 
-
 .toursTabs h1 {
-  color:  #124076;
+  color: #124076;
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 10px;
@@ -444,6 +443,8 @@ footer {
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  height: auto;
 }
 
 .activitySelectionArea {
@@ -523,23 +524,12 @@ footer {
   display: none;
 }
 
-.activitiesFinder2 {
-  position: relative;
-  height: auto;
-}
-
-.treeImage {
-  position: absolute;
-  left: -750px;
-  width: 800px;
-  height: 300px;
-  opacity: 0.07;
-}
 .floatingIslandImage {
   position: absolute;
-  right: -30px;
+  right: -10px;
   width: 150px;
-  bottom: -44.5px;
+  bottom: -25px;
+  opacity: 0.8;
 }
 
 .containerMain {

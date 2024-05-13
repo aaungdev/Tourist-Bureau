@@ -25,7 +25,9 @@
           <li class="navItem active">
             <a href="activities.html" class="navLink">Activities</a>
           </li>
-          <li class="navItem"><a href="hiking.html" class="navLink">Hiking</a></li>
+          <li class="navItem">
+            <a href="hiking.html" class="navLink">Hiking</a>
+          </li>
           <li class="navItem"><a href="#" class="navLink">About Us</a></li>
         </ul>
       </nav>
@@ -37,10 +39,6 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
           enim.
         </p>
-      </div>
-      <div class="activitiesFinder2">
-        <img src="images/tree1.webp" alt="Wine Bottle" class="treeImage">
-  
       </div>
       <div class="activitiesFinder">
         <div class="activitySelectionArea">
@@ -59,13 +57,11 @@
 
         <div id="activityDetails" class="activityDetailsDisplay">
           <h3>Description</h3>
-          <p id="description">
-            🔙 First select an activity.</
-          </p>
+          <p id="description">🔙 First select an activity.</p>
           <p id="location">🔙 First select an activity.</p>
           <p id="price">🔙 First select an activity.</p>
         </div>
-        <form id="purchaseForm" class="activityPurchaseForm activitiesFinder2">
+        <form id="purchaseForm" class="activityPurchaseForm">
           <div class="formGroup">
             <label for="numTickets">Number of Tickets:</label>
             <input
@@ -97,14 +93,15 @@
           </div>
           <button type="submit" class="purchaseButton">Purchase</button>
           <button type="reset" class="resetButton">Reset</button>
-              <img src="images/tree.png" alt="Floating Island" class="floatingIslandImage">
+          <img
+            src="images/tree.png"
+            alt="Floating Island"
+            class="floatingIslandImage"
+          />
         </form>
       </div>
       <div id="confirmationMessage" class="confirmationMessageArea"></div>
     </main>
-
-  
-</div>
     <footer>
       <div class="footerTop">
         <div class="footerSection">
@@ -127,6 +124,6 @@
       </div>
     </footer>
     <script src="scripts/index.js"></script>
-    <script src="scripts/tourist.js"></script>
+    <script src="scripts/activities.js"></script>
   </body>
 </html>
