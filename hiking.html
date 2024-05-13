@@ -25,54 +25,74 @@
           <li class="navItem active">
             <a href="tourist.html" class="navLink">Tourist</a>
           </li>
-          <li class="navItem"><a href="hiking.html" class="navLink">Hiking</a></li>
+          <li class="navItem">
+            <a href="hiking.html" class="navLink">Hiking</a>
+          </li>
           <li class="navItem"><a href="#" class="navLink">About Us</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <div class="containerMain">
-          <select id="hikeSelectorUnique">
-              <option value="">Select a hike...</option>
-              <!-- Hike options will be dynamically populated here -->
-          </select>
-          
-          <div id="hikeDetailsUnique" style="display: none;">
-            <h2 id="hikeNameUnique"></h2>
-            <p id="hikeDescriptionUnique"></p>
-            <div class="imagesContainerUnique">
-                <img id="scenicImageViewUnique" alt="Scenic view of the selected hike" width="300px">
-                <img id="trailMapViewUnique" alt="Trail map of the selected hike">
-            </div>
-            <p id="hikeLengthUnique"></p>
-            <p id="hikeDifficultyUnique"></p>
+        <div class="activitiesFinder2">
+          <img src="images/tree1.webp" alt="Wine Bottle" class="treeImage">
         </div>
-    </div>
-</main>
- 
+        <div class="toursTabs">
+          <h1>Activities Finder</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
+            enim.
+          </p>
+        </div>
+        <select id="hikeSelectorUnique">
+          <option value="">Select a hike...</option>
+          <!-- Hike options will be dynamically populated here -->
+        </select>
+
+        <div id="hikeDetailsUnique" style="display: none">
+          <h2 id="hikeNameUnique"></h2>
+          <p id="hikeDescriptionUnique"></p>
+          <div class="imagesContainerUnique">
+            <img
+              id="scenicImageViewUnique"
+              src=""
+              alt="Scenic view of the selected hike"
+              class="hikingImage"
+            />
+            <img
+              id="trailMapViewUnique"
+              src=""
+              alt="Trail map of the selected hike" class="hikingImage"
+            />
+          </div>
+          <p id="hikeLengthUnique"></p>
+          <p id="hikeDifficultyUnique"></p>
+        </div>
+      </div>
+    </main>
+
     <footer>
-        <div class="footerTop">
-          <div class="footerSection">
-            <img src="images/logo.svg" alt="Company Logo" class="footer-logo" />
-            <p>Tourist Bureau</p>
-          </div>
-          <div class="footerSection">
-            <p>Contact us: example@example.com | +1 234 567 8900</p>
-            <p>1234 Street Address, City, Country</p>
-          </div>
-          <div class="footerSection">
-            <a href="#" class="socialIcon"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="socialIcon"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="socialIcon"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="socialIcon"><i class="fab fa-twitter"></i></a>
-          </div>
+      <div class="footerTop">
+        <div class="footerSection">
+          <img src="images/logo.svg" alt="Company Logo" class="footer-logo" />
+          <p>Tourist Bureau</p>
         </div>
-        <div class="footer-bottom">
-          <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+        <div class="footerSection">
+          <p>Contact us: example@example.com | +1 234 567 8900</p>
+          <p>1234 Street Address, City, Country</p>
         </div>
-      </footer>
-      <script src="scripts/index.js"></script>
-      <script src="scripts/hiking.js"></script>
-    </body>
-  </html>
-  
+        <div class="footerSection">
+          <a href="#" class="socialIcon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="socialIcon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="socialIcon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="socialIcon"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/hiking.js"></script>
+  </body>
+</html>
