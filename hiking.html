@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activities</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <a href="/" class="logoLink">
+        <img src="images/logo.svg" alt="Logo" />
+
+        <span class="logoText">Tourist Bureau</span>
+      </a>
+      <nav class="navbar">
+        <ul class="navList">
+          <li class="navItem">
+            <a href="index.html" class="navLink">Home</a>
+          </li>
+          <li class="navItem active">
+            <a href="tourist.html" class="navLink">Tourist</a>
+          </li>
+          <li class="navItem"><a href="hiking.html" class="navLink">Hiking</a></li>
+          <li class="navItem"><a href="#" class="navLink">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+        <div class="container">
+            <select id="hikeSelector">
+                <option value="">Select one</option>
+                <!-- Hike options will be added here dynamically -->
+            </select>
+            
+            <div id="hikeDetails" style="display:none;">
+                <h2 id="hikeName"></h2>
+                <p id="hikeDescription"></p>
+                <img id="scenicImage" src="images/cart05.jpeg" alt="Scenic view" width="300px">
+                <img id="trailMapImage" src="images/cart08.jpeg" alt="Trail map">
+                <p id="hikeLength"></p>
+                <p id="hikeDifficulty"></p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footerTop">
+          <div class="footerSection">
+            <img src="images/logo.svg" alt="Company Logo" class="footer-logo" />
+            <p>Tourist Bureau</p>
+          </div>
+          <div class="footerSection">
+            <p>Contact us: example@example.com | +1 234 567 8900</p>
+            <p>1234 Street Address, City, Country</p>
+          </div>
+          <div class="footerSection">
+            <a href="#" class="socialIcon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="socialIcon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="socialIcon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="socialIcon"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+        </div>
+      </footer>
+      <script src="scripts/index.js"></script>
+      <script src="scripts/hiking.js"></script>
+    </body>
+  </html>
+  
